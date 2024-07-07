@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add-Post</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="row justify-content-center align-items-center mt-5">
+          <div class="col-sm-8">
+            <!-- #region: header -->
+
+            <h4 class="text-center my-2">ایجاد پست</h4>
+
+            <!-- #endregion -->
+
+            <!-- #region: form -->
+
+            <form id="post-form">
+              <div class="form-group">
+                <label for="title">عنوان پست</label>
+                <input type="text" id="title" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="author">نویسنده</label>
+                <input type="text" id="author" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="body">متن پست</label>
+                <textarea id="body" rows="3" class="form-control"></textarea>
+              </div>
+
+              <button type="submit" class="btn w-100 btn-outline-primary mt-4">
+                ثبت پست
+              </button>
+            </form>
+
+            <!-- #endregion -->
+
+            <!-- #region: divider -->
+
+            <hr class="my-5" />
+
+            <!-- #endregion -->
+
+            <!-- #region: posts -->
+
+            <table class="table table-hover mb-5">
+              <thead>
+                <tr>
+                  <th>عنوان پست</th>
+                  <th>نویسنده</th>
+                  <th>متن پست</th>
+                  <th>حذف</th>
+                </tr>
+              </thead>
+
+              <tbody id="post-list"></tbody>
+            </table>
+
+            <!-- #endregion -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
