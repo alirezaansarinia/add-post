@@ -1,76 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add-Post</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <title>Review Add Post</title>
+    <!-- #region: links -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- #endregion -->
+
+    <!-- #region: scripts -->
+    <script src="./assets/js/script.js" defer></script>
+    <!-- #endregion -->
   </head>
   <body>
-    <section>
-      <div class="container">
-        <div class="row justify-content-center align-items-center mt-5">
-          <div class="col-sm-8">
-            <!-- #region: header -->
+    <section class="container">
+      <div class="row justify-content-center align-items-center mt-5">
+        <div class="col-sm-8" id="parent-container">
+          <!-- #region: title -->
+          <h4 class="text-center my-2">ایجاد پست</h4>
+          <!-- #endregion -->
 
-            <h4 class="text-center my-2">ایجاد پست</h4>
+          <!-- #region: post-form -->
+          <form id="post-form">
+            <div class="form-group">
+              <label for="title" class="form-label">عنوان پست</label>
+              <input type="text" id="title" class="form-control" />
+            </div>
 
-            <!-- #endregion -->
+            <div class="form-group">
+              <label for="author" class="form-label">نویسنده</label>
+              <input type="text" id="author" class="form-control" />
+            </div>
 
-            <!-- #region: form -->
+            <div class="form-group">
+              <label for="body" class="form-label">متن پست</label>
+              <textarea id="body" rows="3" class="form-control"></textarea>
+            </div>
 
-            <form id="post-form">
-              <div class="form-group">
-                <label for="title">عنوان پست</label>
-                <input type="text" id="title" class="form-control" />
-              </div>
+            <button type="submit" class="btn btn-outline-primary w-100 mt-4">
+              ثبت پست
+            </button>
+          </form>
+          <!-- #endregion -->
 
-              <div class="form-group">
-                <label for="author">نویسنده</label>
-                <input type="text" id="author" class="form-control" />
-              </div>
+          <!-- #region: divider -->
+          <hr class="my-5" />
+          <!-- #endregion -->
 
-              <div class="form-group">
-                <label for="body">متن پست</label>
-                <textarea id="body" rows="3" class="form-control"></textarea>
-              </div>
+          <!-- #region: post-table -->
+          <table class="table table-hover mb-5 align-middle">
+            <thead>
+              <tr>
+                <th>عنوان پست</th>
+                <th>نویسنده</th>
+                <th>متن پست</th>
+                <th>حذف</th>
+              </tr>
+            </thead>
 
-              <button type="submit" class="btn w-100 btn-outline-primary mt-4">
-                ثبت پست
-              </button>
-            </form>
-
-            <!-- #endregion -->
-
-            <!-- #region: divider -->
-
-            <hr class="my-5" />
-
-            <!-- #endregion -->
-
-            <!-- #region: posts -->
-
-            <table class="table table-hover mb-5">
-              <thead>
-                <tr>
-                  <th>عنوان پست</th>
-                  <th>نویسنده</th>
-                  <th>متن پست</th>
-                  <th>حذف</th>
-                </tr>
-              </thead>
-
-              <tbody id="post-list"></tbody>
-            </table>
-
-            <!-- #endregion -->
-          </div>
+            <tbody id="post-list"></tbody>
+          </table>
+          <!-- #endregion -->
         </div>
       </div>
     </section>
-
-    <script src="./assets/js/script.js"></script>
   </body>
 </html>
